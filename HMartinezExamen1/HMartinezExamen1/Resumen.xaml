@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HMartinezExamen1.Resumen">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="lblusuario1" HorizontalOptions="End" TextColor="red" FontSize="16"/>
+            <Label Text="Resumen" HorizontalTextAlignment="Center" FontSize="20"/>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Nombre"  Grid.Row="0" Grid.Column="0" />
+                <Label Text="Apellido" Grid.Row="1" Grid.Column="0"/>
+                <Label Text="Edad" Grid.Row="2" Grid.Column="0"/>
+                <Label Text="Fecha" Grid.Row="3" Grid.Column="0"/>
+                <Label Text="Pais" Grid.Row="4" Grid.Column="0"/>
+                <Label Text="Ciudad" Grid.Row="5" Grid.Column="0"/>
+                <Label Text="Monto Inicial" Grid.Row="6" Grid.Column="0"/>
+                <Label Text="Pago mensual" Grid.Row="7" Grid.Column="0"/>
+                <Label Text="Pago Total" Grid.Row="8" Grid.Column="0"/>
+
+                <Entry x:Name="txtNombre" IsReadOnly="True" Grid.Row="0" Grid.Column="1"/>
+                <Entry x:Name="txtapellido" IsReadOnly="True" Grid.Row="1" Grid.Column="1"/>
+                <Entry x:Name="txtedad" IsReadOnly="True" Grid.Row="2" Grid.Column="1"/>
+                <Entry x:Name="txtfecha" IsReadOnly="True" Grid.Row="3" Grid.Column="1"/>
+                <Entry x:Name="txtpais" IsReadOnly="True" Grid.Row="4" Grid.Column="1"/>
+                <Entry x:Name="txtciudad" IsReadOnly="True" Grid.Row="5" Grid.Column="1"/>
+                <Entry x:Name="txtmonto" IsReadOnly="True" Grid.Row="6" Grid.Column="1"/>
+                <Entry x:Name="txtpago" IsReadOnly="True" Grid.Row="7" Grid.Column="1"/>
+                <Entry x:Name="txttotal" IsReadOnly="True" Grid.Row="8" Grid.Column="1"/>
+
+
+
+            </Grid>
+            <Button x:Name="btnsalir" Text="Salir" Clicked="btnsalir_Clicked" ></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

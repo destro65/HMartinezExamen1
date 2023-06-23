@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HMartinezExamen1.Registro">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="lblusuario" HorizontalOptions="End" TextColor="red" FontSize="16"/>
+            <Label Text="REGISTRO" HorizontalTextAlignment="Center" FontSize="20"/>
+            
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Fecha"  Grid.Row="0" Grid.Column="0" />
+                <Label Text="Pais" Grid.Row="1" Grid.Column="0"/>
+                <Label Text="Ciudad" Grid.Row="2" Grid.Column="0"/>
+                <Label Text="Monto Inicial" Grid.Row="3" Grid.Column="0"/>
+                <Label Text="Pago Mensual" Grid.Row="4" Grid.Column="0"/>
+
+
+                <DatePicker x:Name="dtfecha"  Grid.Row="0" Grid.Column="1"/>
+                <Picker Title="Pais" x:Name="pkPais" Grid.Row="1" Grid.Column="1">
+                    <Picker.Items>
+                        <x:String>Ecuador</x:String>
+                        <x:String>Colombia</x:String>
+                        <x:String>Peru</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Picker Title="Ciudad" x:Name="pkCiudad" Grid.Row="2" Grid.Column="1">
+                    <Picker.Items>
+                        <x:String>Quito</x:String>
+                        <x:String>Barranquilla</x:String>
+                        <x:String>Cuzco</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Entry x:Name="txtmonto" Placeholder="Monto Inicial" Keyboard="Numeric" Grid.Row="3" Grid.Column="1" TextChanged="txtmonto_TextChanged" />
+                <Entry x:Name="txtpago" Placeholder="Pago Mensual" Keyboard="Numeric" Grid.Row="4" Grid.Column="1" IsReadOnly="True" TextChanged="txtpago_TextChanged"/>
+            </Grid>
+            <Label Text=""/>
+            <Label Text=""/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>                    
+                </Grid.ColumnDefinitions>
+                <Label Text="Nombre"  Grid.Row="0" Grid.Column="0" />
+                <Label Text="Apellido" Grid.Row="0" Grid.Column="1"/>
+                <Label Text="Edad" Grid.Row="0" Grid.Column="2"/>
+
+                <Entry x:Name="txtnombre" Placeholder="Nombre"  Grid.Row="1" Grid.Column="0"/>
+                <Entry x:Name="txtapellido" Placeholder="Apellido"  Grid.Row="1" Grid.Column="1"/>
+                <Entry x:Name="txtedad" Placeholder="Edad"  Grid.Row="1" Grid.Column="2"/>
+            </Grid>
+            <Label Text=""/>
+            <Label Text=""/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>                    
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="btnpagomensual" Text="Pago Mensual" Clicked="btnpagomensual_Clicked" Grid.Row="0" Grid.Column="0" ></Button>
+                <Button x:Name="btnresumen" Text="Resumen" Clicked="btnresumen_Clicked" Grid.Row="0" Grid.Column="1"></Button>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
